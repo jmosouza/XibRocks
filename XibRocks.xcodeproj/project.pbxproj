@@ -17,6 +17,7 @@
 		CF7582241E24F82D0027C62D /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF7582221E24F82D0027C62D /* MainViewController.xib */; };
 		CF7582271E252D3A0027C62D /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7582251E252D3A0027C62D /* ChildViewController.swift */; };
 		CF7582281E252D3A0027C62D /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF7582261E252D3A0027C62D /* ChildViewController.xib */; };
+		CF75822A1E2533900027C62D /* ChildDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7582291E2533900027C62D /* ChildDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		CF7582221E24F82D0027C62D /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		CF7582251E252D3A0027C62D /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 		CF7582261E252D3A0027C62D /* ChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildViewController.xib; sourceTree = "<group>"; };
+		CF7582291E2533900027C62D /* ChildDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				CF7582221E24F82D0027C62D /* MainViewController.xib */,
 				CF7582251E252D3A0027C62D /* ChildViewController.swift */,
 				CF7582261E252D3A0027C62D /* ChildViewController.xib */,
+				CF7582291E2533900027C62D /* ChildDelegate.swift */,
 			);
 			path = XibRocks;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF7581EE1E24F4DC0027C62D /* AppDelegate.swift in Sources */,
+				CF75822A1E2533900027C62D /* ChildDelegate.swift in Sources */,
 				CF7582231E24F82D0027C62D /* MainViewController.swift in Sources */,
 				CF7582271E252D3A0027C62D /* ChildViewController.swift in Sources */,
 			);

@@ -20,13 +20,14 @@ class MainViewController: UIViewController {
         
         let childViewController = ChildViewController()
         addChildViewController(childViewController)
-        containerView.addSubview(childViewController.view)
         childViewController.didMove(toParentViewController: self)
+        childViewController.delegate = self
         childViewController.view.frame =
             CGRect(x: 0,
                    y: 0,
                    width: containerView.frame.width,
                    height: containerView.frame.height)
+        containerView.addSubview(childViewController.view)
     }
 
 }
@@ -40,6 +41,14 @@ extension MainViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         label.text = textField.text
+    }
+    
+}
+
+extension MainViewController: ChildDelegate {
+    
+    func didPressButton() {
+        label.text = "You pressed the button!"
     }
     
 }

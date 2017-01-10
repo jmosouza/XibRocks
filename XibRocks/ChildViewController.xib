@@ -25,10 +25,25 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PST-Hc-5uv">
+                    <rect key="frame" x="16" y="611" width="343" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="eMT-n3-pyJ"/>
+                    </constraints>
+                    <color key="tintColor" red="0.98608994480000001" green="0.0" blue="0.094829298559999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="didPressButton:" destination="-1" eventType="touchUpInside" id="ckv-nx-Z4n"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.98608994480000001" green="0.0" blue="0.094829298559999997" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="PST-Hc-5uv" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" constant="-32" id="LEC-XT-cWE"/>
                 <constraint firstItem="vCb-1A-NE3" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="jWz-5l-WuR"/>
+                <constraint firstItem="PST-Hc-5uv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qXc-wu-IdU"/>
+                <constraint firstAttribute="bottom" secondItem="PST-Hc-5uv" secondAttribute="bottom" constant="16" id="ybe-dG-SbN"/>
                 <constraint firstItem="vCb-1A-NE3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ytj-hN-czf"/>
             </constraints>
         </view>

@@ -9,11 +9,12 @@
 import UIKit
 
 class ChildViewController: UIViewController {
+    
+    var delegate: ChildDelegate?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBAction func didPressButton(_ sender: Any) {
+        if let delegate = delegate {
+            delegate.didPressButton()
+        }
     }
-
 }
