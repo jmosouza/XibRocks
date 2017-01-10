@@ -15,6 +15,8 @@
 		CF7582201E24F7A50027C62D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CF75821F1E24F7A50027C62D /* .gitignore */; };
 		CF7582231E24F82D0027C62D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7582211E24F82D0027C62D /* MainViewController.swift */; };
 		CF7582241E24F82D0027C62D /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF7582221E24F82D0027C62D /* MainViewController.xib */; };
+		CF7582271E252D3A0027C62D /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7582251E252D3A0027C62D /* ChildViewController.swift */; };
+		CF7582281E252D3A0027C62D /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF7582261E252D3A0027C62D /* ChildViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		CF75821F1E24F7A50027C62D /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		CF7582211E24F82D0027C62D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CF7582221E24F82D0027C62D /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		CF7582251E252D3A0027C62D /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
+		CF7582261E252D3A0027C62D /* ChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				CF7581F91E24F4DC0027C62D /* Info.plist */,
 				CF7582211E24F82D0027C62D /* MainViewController.swift */,
 				CF7582221E24F82D0027C62D /* MainViewController.xib */,
+				CF7582251E252D3A0027C62D /* ChildViewController.swift */,
+				CF7582261E252D3A0027C62D /* ChildViewController.xib */,
 			);
 			path = XibRocks;
 			sourceTree = "<group>";
@@ -241,6 +247,7 @@
 				CF7581F81E24F4DC0027C62D /* LaunchScreen.storyboard in Resources */,
 				CF7582201E24F7A50027C62D /* .gitignore in Resources */,
 				CF7581F51E24F4DC0027C62D /* Assets.xcassets in Resources */,
+				CF7582281E252D3A0027C62D /* ChildViewController.xib in Resources */,
 				CF7582241E24F82D0027C62D /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +275,7 @@
 			files = (
 				CF7581EE1E24F4DC0027C62D /* AppDelegate.swift in Sources */,
 				CF7582231E24F82D0027C62D /* MainViewController.swift in Sources */,
+				CF7582271E252D3A0027C62D /* ChildViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,10 +12,21 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var containerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.delegate = self
+        
+        let childViewController = ChildViewController()
+        addChildViewController(childViewController)
+        containerView.addSubview(childViewController.view)
+        childViewController.didMove(toParentViewController: self)
+        childViewController.view.frame =
+            CGRect(x: 0,
+                   y: 0,
+                   width: containerView.frame.width,
+                   height: containerView.frame.height)
     }
 
 }

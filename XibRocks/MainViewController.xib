@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="XibRocks" customModuleProvider="target">
             <connections>
+                <outlet property="containerView" destination="uhd-oV-SOb" id="HTa-hZ-Zhu"/>
                 <outlet property="label" destination="OZf-5h-edk" id="5pJ-hl-sOO"/>
                 <outlet property="textField" destination="m9G-en-Ezl" id="NNc-qa-QGd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -28,19 +29,27 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZf-5h-edk">
-                    <rect key="frame" x="160" y="284.5" width="0.0" height="0.0"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZf-5h-edk">
+                    <rect key="frame" x="160" y="95" width="0.0" height="0.0"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhd-oV-SOb">
+                    <rect key="frame" x="0.0" y="103" width="320" height="465"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="uhd-oV-SOb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="C19-Pa-Den"/>
+                <constraint firstAttribute="bottom" secondItem="uhd-oV-SOb" secondAttribute="bottom" id="H1H-dF-S1S"/>
                 <constraint firstItem="m9G-en-Ezl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HRT-TL-npF"/>
+                <constraint firstItem="uhd-oV-SOb" firstAttribute="top" secondItem="OZf-5h-edk" secondAttribute="bottom" constant="8" id="OzC-ai-gyw"/>
                 <constraint firstItem="m9G-en-Ezl" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.9" id="RPG-Ot-m9j"/>
+                <constraint firstAttribute="trailing" secondItem="uhd-oV-SOb" secondAttribute="trailing" id="aAU-YW-q8s"/>
                 <constraint firstItem="OZf-5h-edk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dHL-zQ-Ljf"/>
-                <constraint firstItem="OZf-5h-edk" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="jBZ-l0-zSg"/>
+                <constraint firstItem="OZf-5h-edk" firstAttribute="top" secondItem="m9G-en-Ezl" secondAttribute="bottom" constant="8" id="fPj-4f-2gl"/>
                 <constraint firstItem="m9G-en-Ezl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="bottom" multiplier="0.1" id="tt2-Wt-TfH"/>
             </constraints>
         </view>
