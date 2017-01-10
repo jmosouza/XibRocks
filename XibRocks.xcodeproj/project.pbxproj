@@ -8,12 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		CF7581EE1E24F4DC0027C62D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7581ED1E24F4DC0027C62D /* AppDelegate.swift */; };
-		CF7581F01E24F4DC0027C62D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7581EF1E24F4DC0027C62D /* ViewController.swift */; };
-		CF7581F31E24F4DC0027C62D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF7581F11E24F4DC0027C62D /* Main.storyboard */; };
 		CF7581F51E24F4DC0027C62D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF7581F41E24F4DC0027C62D /* Assets.xcassets */; };
 		CF7581F81E24F4DC0027C62D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF7581F61E24F4DC0027C62D /* LaunchScreen.storyboard */; };
 		CF7582031E24F4DC0027C62D /* XibRocksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7582021E24F4DC0027C62D /* XibRocksTests.swift */; };
 		CF75820E1E24F4DC0027C62D /* XibRocksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF75820D1E24F4DC0027C62D /* XibRocksUITests.swift */; };
+		CF7582201E24F7A50027C62D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CF75821F1E24F7A50027C62D /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +35,6 @@
 /* Begin PBXFileReference section */
 		CF7581EA1E24F4DC0027C62D /* XibRocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XibRocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF7581ED1E24F4DC0027C62D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CF7581EF1E24F4DC0027C62D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CF7581F21E24F4DC0027C62D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF7581F41E24F4DC0027C62D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF7581F71E24F4DC0027C62D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF7581F91E24F4DC0027C62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +44,7 @@
 		CF7582091E24F4DC0027C62D /* XibRocksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XibRocksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF75820D1E24F4DC0027C62D /* XibRocksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibRocksUITests.swift; sourceTree = "<group>"; };
 		CF75820F1E24F4DC0027C62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF75821F1E24F7A50027C62D /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +75,7 @@
 		CF7581E11E24F4DC0027C62D = {
 			isa = PBXGroup;
 			children = (
+				CF75821F1E24F7A50027C62D /* .gitignore */,
 				CF7581EC1E24F4DC0027C62D /* XibRocks */,
 				CF7582011E24F4DC0027C62D /* XibRocksTests */,
 				CF75820C1E24F4DC0027C62D /* XibRocksUITests */,
@@ -98,8 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				CF7581ED1E24F4DC0027C62D /* AppDelegate.swift */,
-				CF7581EF1E24F4DC0027C62D /* ViewController.swift */,
-				CF7581F11E24F4DC0027C62D /* Main.storyboard */,
 				CF7581F41E24F4DC0027C62D /* Assets.xcassets */,
 				CF7581F61E24F4DC0027C62D /* LaunchScreen.storyboard */,
 				CF7581F91E24F4DC0027C62D /* Info.plist */,
@@ -236,8 +233,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF7581F81E24F4DC0027C62D /* LaunchScreen.storyboard in Resources */,
+				CF7582201E24F7A50027C62D /* .gitignore in Resources */,
 				CF7581F51E24F4DC0027C62D /* Assets.xcassets in Resources */,
-				CF7581F31E24F4DC0027C62D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +259,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF7581F01E24F4DC0027C62D /* ViewController.swift in Sources */,
 				CF7581EE1E24F4DC0027C62D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,14 +295,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CF7581F11E24F4DC0027C62D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CF7581F21E24F4DC0027C62D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CF7581F61E24F4DC0027C62D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
