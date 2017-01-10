@@ -10,6 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
@@ -24,6 +25,10 @@ extension MainViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return false
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        label.text = textField.text
     }
     
 }
