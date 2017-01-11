@@ -18,6 +18,11 @@
 		CF7582271E252D3A0027C62D /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7582251E252D3A0027C62D /* ChildViewController.swift */; };
 		CF7582281E252D3A0027C62D /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF7582261E252D3A0027C62D /* ChildViewController.xib */; };
 		CF75822A1E2533900027C62D /* ChildDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7582291E2533900027C62D /* ChildDelegate.swift */; };
+		CFE9AB1C1E2579A900C1DDC9 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE9AB1A1E2579A900C1DDC9 /* OptionsViewController.swift */; };
+		CFE9AB1D1E2579A900C1DDC9 /* OptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE9AB1B1E2579A900C1DDC9 /* OptionsViewController.xib */; };
+		CFE9AB271E259D1700C1DDC9 /* OptionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE9AB261E259D1700C1DDC9 /* OptionsCell.xib */; };
+		CFE9AB291E259FFD00C1DDC9 /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE9AB281E259FFD00C1DDC9 /* UIView+Nib.swift */; };
+		CFE9AB2B1E25A04200C1DDC9 /* OptionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE9AB2A1E25A04200C1DDC9 /* OptionsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +44,7 @@
 
 /* Begin PBXFileReference section */
 		CF7581EA1E24F4DC0027C62D /* XibRocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XibRocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF7581ED1E24F4DC0027C62D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF7581ED1E24F4DC0027C62D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CF7581F41E24F4DC0027C62D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF7581F71E24F4DC0027C62D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF7581F91E24F4DC0027C62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +60,11 @@
 		CF7582251E252D3A0027C62D /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 		CF7582261E252D3A0027C62D /* ChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildViewController.xib; sourceTree = "<group>"; };
 		CF7582291E2533900027C62D /* ChildDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildDelegate.swift; sourceTree = "<group>"; };
+		CFE9AB1A1E2579A900C1DDC9 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = OptionsViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		CFE9AB1B1E2579A900C1DDC9 /* OptionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionsViewController.xib; sourceTree = "<group>"; };
+		CFE9AB261E259D1700C1DDC9 /* OptionsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionsCell.xib; sourceTree = "<group>"; };
+		CFE9AB281E259FFD00C1DDC9 /* UIView+Nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
+		CFE9AB2A1E25A04200C1DDC9 /* OptionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = OptionsCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,11 +120,10 @@
 				CF7581F41E24F4DC0027C62D /* Assets.xcassets */,
 				CF7581F61E24F4DC0027C62D /* LaunchScreen.storyboard */,
 				CF7581F91E24F4DC0027C62D /* Info.plist */,
-				CF7582211E24F82D0027C62D /* MainViewController.swift */,
-				CF7582221E24F82D0027C62D /* MainViewController.xib */,
-				CF7582251E252D3A0027C62D /* ChildViewController.swift */,
-				CF7582261E252D3A0027C62D /* ChildViewController.xib */,
-				CF7582291E2533900027C62D /* ChildDelegate.swift */,
+				CFE9AB191E25793600C1DDC9 /* Main */,
+				CFE9AB181E25791E00C1DDC9 /* Child */,
+				CFE9AB1E1E2579AF00C1DDC9 /* Options */,
+				CFE9AB281E259FFD00C1DDC9 /* UIView+Nib.swift */,
 			);
 			path = XibRocks;
 			sourceTree = "<group>";
@@ -135,6 +144,36 @@
 				CF75820F1E24F4DC0027C62D /* Info.plist */,
 			);
 			path = XibRocksUITests;
+			sourceTree = "<group>";
+		};
+		CFE9AB181E25791E00C1DDC9 /* Child */ = {
+			isa = PBXGroup;
+			children = (
+				CF7582291E2533900027C62D /* ChildDelegate.swift */,
+				CF7582251E252D3A0027C62D /* ChildViewController.swift */,
+				CF7582261E252D3A0027C62D /* ChildViewController.xib */,
+			);
+			name = Child;
+			sourceTree = "<group>";
+		};
+		CFE9AB191E25793600C1DDC9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CF7582211E24F82D0027C62D /* MainViewController.swift */,
+				CF7582221E24F82D0027C62D /* MainViewController.xib */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		CFE9AB1E1E2579AF00C1DDC9 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				CFE9AB1A1E2579A900C1DDC9 /* OptionsViewController.swift */,
+				CFE9AB1B1E2579A900C1DDC9 /* OptionsViewController.xib */,
+				CFE9AB2A1E25A04200C1DDC9 /* OptionsCell.swift */,
+				CFE9AB261E259D1700C1DDC9 /* OptionsCell.xib */,
+			);
+			name = Options;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,8 +289,10 @@
 				CF7581F81E24F4DC0027C62D /* LaunchScreen.storyboard in Resources */,
 				CF7582201E24F7A50027C62D /* .gitignore in Resources */,
 				CF7581F51E24F4DC0027C62D /* Assets.xcassets in Resources */,
+				CFE9AB1D1E2579A900C1DDC9 /* OptionsViewController.xib in Resources */,
 				CF7582281E252D3A0027C62D /* ChildViewController.xib in Resources */,
 				CF7582241E24F82D0027C62D /* MainViewController.xib in Resources */,
+				CFE9AB271E259D1700C1DDC9 /* OptionsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +318,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF7581EE1E24F4DC0027C62D /* AppDelegate.swift in Sources */,
+				CFE9AB1C1E2579A900C1DDC9 /* OptionsViewController.swift in Sources */,
+				CFE9AB291E259FFD00C1DDC9 /* UIView+Nib.swift in Sources */,
 				CF75822A1E2533900027C62D /* ChildDelegate.swift in Sources */,
+				CFE9AB2B1E25A04200C1DDC9 /* OptionsCell.swift in Sources */,
 				CF7582231E24F82D0027C62D /* MainViewController.swift in Sources */,
 				CF7582271E252D3A0027C62D /* ChildViewController.swift in Sources */,
 			);
@@ -522,6 +566,7 @@
 				CF7582141E24F4DC0027C62D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF7582151E24F4DC0027C62D /* Build configuration list for PBXNativeTarget "XibRocksTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +575,7 @@
 				CF7582171E24F4DC0027C62D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF7582181E24F4DC0027C62D /* Build configuration list for PBXNativeTarget "XibRocksUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +584,7 @@
 				CF75821A1E24F4DC0027C62D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
