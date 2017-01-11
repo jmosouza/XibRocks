@@ -11,14 +11,14 @@ import UIKit
 class MainViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var containerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textField.delegate = self
         
-        let childViewController = ChildViewController()
+        label.text = "Challenge text here"
+        
+        let childViewController = gameViewController()
         addChildViewController(childViewController)
         childViewController.didMove(toParentViewController: self)
         childViewController.delegate = self
@@ -28,6 +28,10 @@ class MainViewController: UIViewController {
                    width: containerView.frame.width,
                    height: containerView.frame.height)
         containerView.addSubview(childViewController.view)
+    }
+    
+    func gameViewController() -> ChallengeViewController {
+        return OptionsViewController()
     }
 
 }
@@ -45,7 +49,7 @@ extension MainViewController: UITextFieldDelegate {
     
 }
 
-extension MainViewController: ChildDelegate {
+extension MainViewController: ChallengeDelegate {
     
     func didPressButton() {
         label.text = "You pressed the button!"

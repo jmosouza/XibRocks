@@ -8,9 +8,7 @@
 
 import UIKit
 
-class ChildViewController: UIViewController {
-    
-    var delegate: ChildDelegate?
+class ChildViewController: ChallengeViewController {
 
     @IBAction func didPressButton(_ sender: Any) {
         if let delegate = delegate {

@@ -8,13 +8,15 @@
 
 import UIKit
 
-class OptionsViewController: UIViewController, UITableViewDataSource {
+class OptionsViewController: ChallengeViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        (view as! UITableView).dataSource = self
+    func didPressButton() {
+        delegate?.didPressButton()
     }
+}
 
+extension OptionsViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
@@ -22,6 +24,7 @@ class OptionsViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UIView.fromNib() as OptionsCell
         cell.button.setTitle("Option \(indexPath.row)", for: .normal)
+        cell.button.addTarget(self, action: #selector(didPressButton), for: .touchUpInside)
         return cell
     }
 
