@@ -20,9 +20,9 @@ class OptionsViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let option = UIView.fromNib() as OptionsCell
-        option.button.titleLabel?.text = "Option text here"
-        return option
+        let cell = UIView.fromNib() as OptionsCell
+        cell.button.setTitle("Option \(indexPath.row)", for: .normal)
+        return cell
     }
 
 }
