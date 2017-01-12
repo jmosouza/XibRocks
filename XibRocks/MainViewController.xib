@@ -6,7 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,7 +14,6 @@
             <connections>
                 <outlet property="containerView" destination="uhd-oV-SOb" id="HTa-hZ-Zhu"/>
                 <outlet property="label" destination="OZf-5h-edk" id="5pJ-hl-sOO"/>
-                <outlet property="textField" destination="m9G-en-Ezl" id="NNc-qa-QGd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,34 +22,31 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m9G-en-Ezl">
-                    <rect key="frame" x="16" y="57" width="288" height="30"/>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZf-5h-edk">
-                    <rect key="frame" x="160" y="95" width="0.0" height="0.0"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Challenge text here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZf-5h-edk">
+                    <rect key="frame" x="8.5" y="28" width="304" height="120"/>
+                    <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="zFC-sR-SKl"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhd-oV-SOb">
-                    <rect key="frame" x="0.0" y="103" width="320" height="465"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhd-oV-SOb" customClass="UIContainer">
+                    <rect key="frame" x="0.0" y="156" width="320" height="412"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="uhd-oV-SOb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="C19-Pa-Den"/>
+                <constraint firstItem="uhd-oV-SOb" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="1Gy-WI-tSW"/>
+                <constraint firstItem="OZf-5h-edk" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" constant="-16" id="EW8-Xq-fEP"/>
                 <constraint firstAttribute="bottom" secondItem="uhd-oV-SOb" secondAttribute="bottom" id="H1H-dF-S1S"/>
-                <constraint firstItem="m9G-en-Ezl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HRT-TL-npF"/>
+                <constraint firstItem="uhd-oV-SOb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JnB-3m-Xqk"/>
                 <constraint firstItem="uhd-oV-SOb" firstAttribute="top" secondItem="OZf-5h-edk" secondAttribute="bottom" constant="8" id="OzC-ai-gyw"/>
-                <constraint firstItem="m9G-en-Ezl" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.9" id="RPG-Ot-m9j"/>
-                <constraint firstAttribute="trailing" secondItem="uhd-oV-SOb" secondAttribute="trailing" id="aAU-YW-q8s"/>
+                <constraint firstAttribute="bottom" secondItem="uhd-oV-SOb" secondAttribute="bottom" id="PkG-SP-eOu"/>
                 <constraint firstItem="OZf-5h-edk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dHL-zQ-Ljf"/>
-                <constraint firstItem="OZf-5h-edk" firstAttribute="top" secondItem="m9G-en-Ezl" secondAttribute="bottom" constant="8" id="fPj-4f-2gl"/>
-                <constraint firstItem="m9G-en-Ezl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="bottom" multiplier="0.1" id="tt2-Wt-TfH"/>
+                <constraint firstItem="OZf-5h-edk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" constant="20" id="f4W-vk-ZEG"/>
             </constraints>
         </view>
     </objects>

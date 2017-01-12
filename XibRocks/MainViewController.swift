@@ -11,17 +11,22 @@ import UIKit
 class MainViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var containerView: UIView!
+    
+    var challenge: Challenge?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textField.delegate = self
         
-        let childViewController = ChildViewController()
+        challenge = MainViewController.generateChallenge()
+        
+        label.text = challenge?.question
+        
+        let childViewController = MainViewController.generateChallengeViewController()
         addChildViewController(childViewController)
         childViewController.didMove(toParentViewController: self)
         childViewController.delegate = self
+        childViewController.challenge = challenge
         childViewController.view.frame =
             CGRect(x: 0,
                    y: 0,
@@ -29,26 +34,38 @@ class MainViewController: UIViewController {
                    height: containerView.frame.height)
         containerView.addSubview(childViewController.view)
     }
+    
+    class func generateChallengeViewController() -> ChallengeViewController {
+        return OptionsViewController()
+    }
+    
+    class func generateChallenge() -> Challenge {
+        
+        let options = [
+            "GitHub",
+            "Bitbucket",
+            "GitLab",
+            "Other"
+        ]
+        
+        let challenge = Challenge(
+            question: "What's your favorite git service?",
+            answer: "GitHub",
+            options: options)
+        
+        return challenge
+    }
 
 }
 
-extension MainViewController: UITextFieldDelegate {
+extension MainViewController: ChallengeDelegate {
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return false
+    func challengeDidAnswerRight() {
+        label.text = "Your are correct!"
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        label.text = textField.text
-    }
-    
-}
-
-extension MainViewController: ChildDelegate {
-    
-    func didPressButton() {
-        label.text = "You pressed the button!"
+    func challengeDidAnswerWrong() {
+        label.text = "Try again..."
     }
     
 }

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OptionsCell" customModule="XibRocks" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="FgG-iq-kbe" customClass="OptionsCell" customModule="XibRocks" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FgG-iq-kbe" id="Sqk-0A-Kg2">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="47"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Oh-bH-tC6">
+                        <rect key="frame" x="8" y="0.0" width="359" height="39"/>
+                        <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <state key="normal" title="Button">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5Oh-bH-tC6" firstAttribute="top" secondItem="Sqk-0A-Kg2" secondAttribute="top" id="9z3-22-eyg"/>
+                    <constraint firstItem="5Oh-bH-tC6" firstAttribute="height" secondItem="Sqk-0A-Kg2" secondAttribute="height" constant="-8" id="RDh-Ct-i0j"/>
+                    <constraint firstItem="5Oh-bH-tC6" firstAttribute="width" secondItem="Sqk-0A-Kg2" secondAttribute="width" constant="-16" id="fkh-ld-8js"/>
+                    <constraint firstItem="5Oh-bH-tC6" firstAttribute="centerX" secondItem="Sqk-0A-Kg2" secondAttribute="centerX" id="jcO-3L-2cH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="button" destination="5Oh-bH-tC6" id="Anh-eD-EUW"/>
+            </connections>
+            <point key="canvasLocation" x="-21.5" y="-70"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,5 +1,5 @@
 //
-//  ChildDelegate.swift
+//  ChallengeDelegate.swift
 //  XibRocks
 //
 //  Created by João Marcelo on 10/01/17.
@@ -8,8 +8,9 @@
 
 import Foundation
 
-protocol ChildDelegate {
+protocol ChallengeDelegate {
     
-    func didPressButton() -> Void
+    func challengeDidAnswerRight()
+    func challengeDidAnswerWrong()
     
 }
