@@ -32,7 +32,7 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhd-oV-SOb">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhd-oV-SOb" customClass="UIContainer">
                     <rect key="frame" x="0.0" y="156" width="320" height="412"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>

@@ -12,7 +12,7 @@ class ChildViewController: ChallengeViewController {
 
     @IBAction func didPressButton(_ sender: Any) {
         if let delegate = delegate {
-            delegate.didPressButton()
+            delegate.challengeDidAnswerRight()
         }
     }
 }

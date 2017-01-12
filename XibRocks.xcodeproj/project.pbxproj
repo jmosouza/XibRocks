@@ -19,6 +19,7 @@
 		CF7582281E252D3A0027C62D /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF7582261E252D3A0027C62D /* ChildViewController.xib */; };
 		CF75822A1E2533900027C62D /* ChallengeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7582291E2533900027C62D /* ChallengeDelegate.swift */; };
 		CF8FF0601E26DA2A00B3DCC0 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8FF05F1E26DA2A00B3DCC0 /* ChallengeViewController.swift */; };
+		CF8FF0621E26FC9A00B3DCC0 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8FF0611E26FC9A00B3DCC0 /* Challenge.swift */; };
 		CFE9AB1C1E2579A900C1DDC9 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE9AB1A1E2579A900C1DDC9 /* OptionsViewController.swift */; };
 		CFE9AB1D1E2579A900C1DDC9 /* OptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE9AB1B1E2579A900C1DDC9 /* OptionsViewController.xib */; };
 		CFE9AB271E259D1700C1DDC9 /* OptionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE9AB261E259D1700C1DDC9 /* OptionsCell.xib */; };
@@ -62,6 +63,7 @@
 		CF7582261E252D3A0027C62D /* ChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildViewController.xib; sourceTree = "<group>"; };
 		CF7582291E2533900027C62D /* ChallengeDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeDelegate.swift; sourceTree = "<group>"; };
 		CF8FF05F1E26DA2A00B3DCC0 /* ChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		CF8FF0611E26FC9A00B3DCC0 /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		CFE9AB1A1E2579A900C1DDC9 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = OptionsViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CFE9AB1B1E2579A900C1DDC9 /* OptionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionsViewController.xib; sourceTree = "<group>"; };
 		CFE9AB261E259D1700C1DDC9 /* OptionsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionsCell.xib; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			children = (
 				CF7582291E2533900027C62D /* ChallengeDelegate.swift */,
 				CF8FF05F1E26DA2A00B3DCC0 /* ChallengeViewController.swift */,
+				CF8FF0611E26FC9A00B3DCC0 /* Challenge.swift */,
 			);
 			name = Challenge;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF7581EE1E24F4DC0027C62D /* AppDelegate.swift in Sources */,
+				CF8FF0621E26FC9A00B3DCC0 /* Challenge.swift in Sources */,
 				CFE9AB1C1E2579A900C1DDC9 /* OptionsViewController.swift in Sources */,
 				CF8FF0601E26DA2A00B3DCC0 /* ChallengeViewController.swift in Sources */,
 				CFE9AB291E259FFD00C1DDC9 /* UIView+Nib.swift in Sources */,

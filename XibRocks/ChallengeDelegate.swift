@@ -10,6 +10,7 @@ import Foundation
 
 protocol ChallengeDelegate {
     
-    func didPressButton() -> Void
+    func challengeDidAnswerRight()
+    func challengeDidAnswerWrong()
     
 }

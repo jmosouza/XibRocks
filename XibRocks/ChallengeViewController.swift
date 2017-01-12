@@ -10,6 +10,7 @@ import UIKit
 
 class ChallengeViewController: UIViewController {
 
+    var challenge: Challenge?
     var delegate: ChallengeDelegate?
 
 }

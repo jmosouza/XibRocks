@@ -13,15 +13,20 @@ class MainViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var containerView: UIView!
     
+    var challenge: Challenge?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        label.text = "Challenge text here"
+        challenge = MainViewController.generateChallenge()
         
-        let childViewController = gameViewController()
+        label.text = challenge?.question
+        
+        let childViewController = MainViewController.generateChallengeViewController()
         addChildViewController(childViewController)
         childViewController.didMove(toParentViewController: self)
         childViewController.delegate = self
+        childViewController.challenge = challenge
         childViewController.view.frame =
             CGRect(x: 0,
                    y: 0,
@@ -30,29 +35,37 @@ class MainViewController: UIViewController {
         containerView.addSubview(childViewController.view)
     }
     
-    func gameViewController() -> ChallengeViewController {
+    class func generateChallengeViewController() -> ChallengeViewController {
         return OptionsViewController()
     }
-
-}
-
-extension MainViewController: UITextFieldDelegate {
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return false
+    class func generateChallenge() -> Challenge {
+        
+        let options = [
+            "GitHub",
+            "Bitbucket",
+            "GitLab",
+            "Other"
+        ]
+        
+        let challenge = Challenge(
+            question: "What's your favorite git service?",
+            answer: "GitHub",
+            options: options)
+        
+        return challenge
     }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        label.text = textField.text
-    }
-    
+
 }
 
 extension MainViewController: ChallengeDelegate {
     
-    func didPressButton() {
-        label.text = "You pressed the button!"
+    func challengeDidAnswerRight() {
+        label.text = "Your are correct!"
+    }
+    
+    func challengeDidAnswerWrong() {
+        label.text = "Try again..."
     }
     
 }

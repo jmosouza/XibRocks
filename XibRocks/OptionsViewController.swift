@@ -10,21 +10,33 @@ import UIKit
 
 class OptionsViewController: ChallengeViewController {
     
-    func didPressButton() {
-        delegate?.didPressButton()
+    func didAnswer(sender: UIButton) {
+        
+        let index = sender.tag
+        
+        if let option = challenge?.options[index],
+            let success = challenge?.answer(option), success {
+            delegate?.challengeDidAnswerRight()
+        } else {
+            delegate?.challengeDidAnswerWrong()
+        }
     }
+
 }
 
 extension OptionsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return challenge?.options.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UIView.fromNib() as OptionsCell
-        cell.button.setTitle("Option \(indexPath.row)", for: .normal)
-        cell.button.addTarget(self, action: #selector(didPressButton), for: .touchUpInside)
+        if let option = challenge?.options[indexPath.row] {
+            cell.button.tag = indexPath.row
+            cell.button.setTitle(option, for: .normal)
+            cell.button.addTarget(self, action: #selector(didAnswer), for: .touchUpInside)
+        }
         return cell
     }
 
