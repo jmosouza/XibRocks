@@ -8,12 +8,13 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var database: FIRDatabaseReference?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -26,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Firebase
         FIRApp.configure()
+        database = FIRDatabase.database().reference()
+        database?.child("users").childByAutoId().setValue(["username": "jmosouza"])
         
         return true
     }

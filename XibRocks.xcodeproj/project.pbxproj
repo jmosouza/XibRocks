@@ -23,6 +23,7 @@
 		CF75822A1E2533900027C62D /* ChallengeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7582291E2533900027C62D /* ChallengeDelegate.swift */; };
 		CF8FF0601E26DA2A00B3DCC0 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8FF05F1E26DA2A00B3DCC0 /* ChallengeViewController.swift */; };
 		CF8FF0621E26FC9A00B3DCC0 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8FF0611E26FC9A00B3DCC0 /* Challenge.swift */; };
+		CFE2924D1E298879002C46FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFE2924C1E298879002C46FE /* GoogleService-Info.plist */; };
 		CFE9AB1C1E2579A900C1DDC9 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE9AB1A1E2579A900C1DDC9 /* OptionsViewController.swift */; };
 		CFE9AB1D1E2579A900C1DDC9 /* OptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE9AB1B1E2579A900C1DDC9 /* OptionsViewController.xib */; };
 		CFE9AB271E259D1700C1DDC9 /* OptionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE9AB261E259D1700C1DDC9 /* OptionsCell.xib */; };
@@ -74,6 +75,7 @@
 		CF7582291E2533900027C62D /* ChallengeDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeDelegate.swift; sourceTree = "<group>"; };
 		CF8FF05F1E26DA2A00B3DCC0 /* ChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		CF8FF0611E26FC9A00B3DCC0 /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		CFE2924C1E298879002C46FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CFE9AB1A1E2579A900C1DDC9 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = OptionsViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CFE9AB1B1E2579A900C1DDC9 /* OptionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionsViewController.xib; sourceTree = "<group>"; };
 		CFE9AB261E259D1700C1DDC9 /* OptionsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionsCell.xib; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				CF7581F41E24F4DC0027C62D /* Assets.xcassets */,
 				CF7581F61E24F4DC0027C62D /* LaunchScreen.storyboard */,
 				CF7581F91E24F4DC0027C62D /* Info.plist */,
+				CFE2924C1E298879002C46FE /* GoogleService-Info.plist */,
 				CFE9AB191E25793600C1DDC9 /* Main */,
 				CFE9AB181E25791E00C1DDC9 /* Child */,
 				CFE9AB1E1E2579AF00C1DDC9 /* Options */,
@@ -350,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF7581F81E24F4DC0027C62D /* LaunchScreen.storyboard in Resources */,
+				CFE2924D1E298879002C46FE /* GoogleService-Info.plist in Resources */,
 				CF7582201E24F7A50027C62D /* .gitignore in Resources */,
 				CF7581F51E24F4DC0027C62D /* Assets.xcassets in Resources */,
 				CFE9AB1D1E2579A900C1DDC9 /* OptionsViewController.xib in Resources */,

@@ -7,6 +7,7 @@ target 'XibRocks' do
 
   # Pods for XibRocks
   pod 'Firebase/Core'
+  pod 'Firebase/Database'
 
   target 'XibRocksTests' do
     inherit! :search_paths
