@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class MainViewController: UIViewController {
 
@@ -14,9 +16,23 @@ class MainViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     
     var challenge: Challenge?
-    
+    var database: FIRDatabaseReference?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        database = FIRDatabase.database().reference()
+        
+        if database != nil {
+            let query = database?.child("questions").queryLimited(toFirst: 100)
+            query?.observeSingleEvent(of: .value) { (snapshot: FIRDataSnapshot) in
+                for child in snapshot.children {
+                    let snapshotChild = child as! FIRDataSnapshot
+                    let challenge = snapshotChild.value as? NSDictionary
+                    print(challenge?["question"] ?? "...")
+                }
+            }
+        }
         
         challenge = MainViewController.generateChallenge()
         

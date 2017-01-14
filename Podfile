@@ -6,6 +6,7 @@ target 'XibRocks' do
   use_frameworks!
 
   # Pods for XibRocks
+  pod 'Fakery'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
 
