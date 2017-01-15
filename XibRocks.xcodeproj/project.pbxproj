@@ -18,17 +18,16 @@
 		CF7582201E24F7A50027C62D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CF75821F1E24F7A50027C62D /* .gitignore */; };
 		CF7582231E24F82D0027C62D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7582211E24F82D0027C62D /* MainViewController.swift */; };
 		CF7582241E24F82D0027C62D /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF7582221E24F82D0027C62D /* MainViewController.xib */; };
-		CF7582271E252D3A0027C62D /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7582251E252D3A0027C62D /* ChildViewController.swift */; };
-		CF7582281E252D3A0027C62D /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF7582261E252D3A0027C62D /* ChildViewController.xib */; };
-		CF75822A1E2533900027C62D /* ChallengeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7582291E2533900027C62D /* ChallengeDelegate.swift */; };
-		CF8FF0601E26DA2A00B3DCC0 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8FF05F1E26DA2A00B3DCC0 /* ChallengeViewController.swift */; };
-		CF8FF0621E26FC9A00B3DCC0 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8FF0611E26FC9A00B3DCC0 /* Challenge.swift */; };
+		CF75822A1E2533900027C62D /* ChallengeHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7582291E2533900027C62D /* ChallengeHandlerDelegate.swift */; };
+		CF8FF0601E26DA2A00B3DCC0 /* ChallengeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8FF05F1E26DA2A00B3DCC0 /* ChallengeHandler.swift */; };
 		CFE2924D1E298879002C46FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFE2924C1E298879002C46FE /* GoogleService-Info.plist */; };
 		CFE9AB1C1E2579A900C1DDC9 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE9AB1A1E2579A900C1DDC9 /* OptionsViewController.swift */; };
 		CFE9AB1D1E2579A900C1DDC9 /* OptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE9AB1B1E2579A900C1DDC9 /* OptionsViewController.xib */; };
 		CFE9AB271E259D1700C1DDC9 /* OptionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE9AB261E259D1700C1DDC9 /* OptionsCell.xib */; };
 		CFE9AB291E259FFD00C1DDC9 /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE9AB281E259FFD00C1DDC9 /* UIView+Nib.swift */; };
 		CFE9AB2B1E25A04200C1DDC9 /* OptionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE9AB2A1E25A04200C1DDC9 /* OptionsCell.swift */; };
+		CFEF01E41E2BC19800090EB8 /* OptionsChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF01E31E2BC19800090EB8 /* OptionsChallenge.swift */; };
+		CFF378E31E2BE81B008249BD /* BaseChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF378E21E2BE81B008249BD /* BaseChallenge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,17 +69,16 @@
 		CF75821F1E24F7A50027C62D /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		CF7582211E24F82D0027C62D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CF7582221E24F82D0027C62D /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		CF7582251E252D3A0027C62D /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
-		CF7582261E252D3A0027C62D /* ChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildViewController.xib; sourceTree = "<group>"; };
-		CF7582291E2533900027C62D /* ChallengeDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeDelegate.swift; sourceTree = "<group>"; };
-		CF8FF05F1E26DA2A00B3DCC0 /* ChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
-		CF8FF0611E26FC9A00B3DCC0 /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		CF7582291E2533900027C62D /* ChallengeHandlerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeHandlerDelegate.swift; sourceTree = "<group>"; };
+		CF8FF05F1E26DA2A00B3DCC0 /* ChallengeHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeHandler.swift; sourceTree = "<group>"; };
 		CFE2924C1E298879002C46FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CFE9AB1A1E2579A900C1DDC9 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = OptionsViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CFE9AB1B1E2579A900C1DDC9 /* OptionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionsViewController.xib; sourceTree = "<group>"; };
 		CFE9AB261E259D1700C1DDC9 /* OptionsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionsCell.xib; sourceTree = "<group>"; };
 		CFE9AB281E259FFD00C1DDC9 /* UIView+Nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
 		CFE9AB2A1E25A04200C1DDC9 /* OptionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = OptionsCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		CFEF01E31E2BC19800090EB8 /* OptionsChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsChallenge.swift; sourceTree = "<group>"; };
+		CFF378E21E2BE81B008249BD /* BaseChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseChallenge.swift; sourceTree = "<group>"; };
 		F984CBF53A1A7296F1F6276C /* Pods_XibRocksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XibRocksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB45AB0C60ED4428629E2C46 /* Pods-XibRocksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XibRocksTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XibRocksTests/Pods-XibRocksTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,7 +167,6 @@
 				CF7581F91E24F4DC0027C62D /* Info.plist */,
 				CFE2924C1E298879002C46FE /* GoogleService-Info.plist */,
 				CFE9AB191E25793600C1DDC9 /* Main */,
-				CFE9AB181E25791E00C1DDC9 /* Child */,
 				CFE9AB1E1E2579AF00C1DDC9 /* Options */,
 				CFE9AB281E259FFD00C1DDC9 /* UIView+Nib.swift */,
 			);
@@ -197,20 +194,11 @@
 		CF8FF05C1E26D9ED00B3DCC0 /* Challenge */ = {
 			isa = PBXGroup;
 			children = (
-				CF7582291E2533900027C62D /* ChallengeDelegate.swift */,
-				CF8FF05F1E26DA2A00B3DCC0 /* ChallengeViewController.swift */,
-				CF8FF0611E26FC9A00B3DCC0 /* Challenge.swift */,
+				CF8FF05F1E26DA2A00B3DCC0 /* ChallengeHandler.swift */,
+				CF7582291E2533900027C62D /* ChallengeHandlerDelegate.swift */,
+				CFF378E21E2BE81B008249BD /* BaseChallenge.swift */,
 			);
 			name = Challenge;
-			sourceTree = "<group>";
-		};
-		CFE9AB181E25791E00C1DDC9 /* Child */ = {
-			isa = PBXGroup;
-			children = (
-				CF7582251E252D3A0027C62D /* ChildViewController.swift */,
-				CF7582261E252D3A0027C62D /* ChildViewController.xib */,
-			);
-			name = Child;
 			sourceTree = "<group>";
 		};
 		CFE9AB191E25793600C1DDC9 /* Main */ = {
@@ -229,6 +217,7 @@
 				CFE9AB1B1E2579A900C1DDC9 /* OptionsViewController.xib */,
 				CFE9AB2A1E25A04200C1DDC9 /* OptionsCell.swift */,
 				CFE9AB261E259D1700C1DDC9 /* OptionsCell.xib */,
+				CFEF01E31E2BC19800090EB8 /* OptionsChallenge.swift */,
 			);
 			name = Options;
 			sourceTree = "<group>";
@@ -357,7 +346,6 @@
 				CF7582201E24F7A50027C62D /* .gitignore in Resources */,
 				CF7581F51E24F4DC0027C62D /* Assets.xcassets in Resources */,
 				CFE9AB1D1E2579A900C1DDC9 /* OptionsViewController.xib in Resources */,
-				CF7582281E252D3A0027C62D /* ChildViewController.xib in Resources */,
 				CF7582241E24F82D0027C62D /* MainViewController.xib in Resources */,
 				CFE9AB271E259D1700C1DDC9 /* OptionsCell.xib in Resources */,
 			);
@@ -522,15 +510,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFEF01E41E2BC19800090EB8 /* OptionsChallenge.swift in Sources */,
 				CF7581EE1E24F4DC0027C62D /* AppDelegate.swift in Sources */,
-				CF8FF0621E26FC9A00B3DCC0 /* Challenge.swift in Sources */,
 				CFE9AB1C1E2579A900C1DDC9 /* OptionsViewController.swift in Sources */,
-				CF8FF0601E26DA2A00B3DCC0 /* ChallengeViewController.swift in Sources */,
+				CFF378E31E2BE81B008249BD /* BaseChallenge.swift in Sources */,
+				CF8FF0601E26DA2A00B3DCC0 /* ChallengeHandler.swift in Sources */,
 				CFE9AB291E259FFD00C1DDC9 /* UIView+Nib.swift in Sources */,
-				CF75822A1E2533900027C62D /* ChallengeDelegate.swift in Sources */,
+				CF75822A1E2533900027C62D /* ChallengeHandlerDelegate.swift in Sources */,
 				CFE9AB2B1E25A04200C1DDC9 /* OptionsCell.swift in Sources */,
 				CF7582231E24F82D0027C62D /* MainViewController.swift in Sources */,
-				CF7582271E252D3A0027C62D /* ChildViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

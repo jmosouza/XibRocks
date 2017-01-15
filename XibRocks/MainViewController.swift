@@ -10,12 +10,13 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var containerView: UIView!
     
-    var challenge: Challenge?
+    var challengeHandler: ChallengeHandler?
+    var challenge: BaseChallenge?
     var database: FIRDatabaseReference?
 
     override func viewDidLoad() {
@@ -38,24 +39,26 @@ class MainViewController: UIViewController {
         
         label.text = challenge?.question
         
-        let childViewController = MainViewController.generateChallengeViewController()
-        addChildViewController(childViewController)
-        childViewController.didMove(toParentViewController: self)
-        childViewController.delegate = self
-        childViewController.challenge = challenge
-        childViewController.view.frame =
+        var challengeHandler = MainViewController.generateChallengeViewController()
+        challengeHandler.delegate = self
+        challengeHandler.challenge = challenge
+        
+        let challengeHandlerVC = challengeHandler as! UIViewController
+        addChildViewController(challengeHandlerVC)
+        challengeHandlerVC.didMove(toParentViewController: self)
+        challengeHandlerVC.view.frame =
             CGRect(x: 0,
                    y: 0,
                    width: containerView.frame.width,
                    height: containerView.frame.height)
-        containerView.addSubview(childViewController.view)
+        containerView.addSubview(challengeHandlerVC.view)
     }
     
-    class func generateChallengeViewController() -> ChallengeViewController {
+    class func generateChallengeViewController() -> ChallengeHandler {
         return OptionsViewController()
     }
     
-    class func generateChallenge() -> Challenge {
+    class func generateChallenge() -> BaseChallenge {
         
         let options = [
             "GitHub",
@@ -63,18 +66,18 @@ class MainViewController: UIViewController {
             "GitLab",
             "Other"
         ]
-        
-        let challenge = Challenge(
-            question: "What's your favorite git service?",
-            answer: "GitHub",
-            options: options)
+
+        let challenge = OptionsChallenge()
+        challenge.question = "What's your favorite git service?"
+        challenge.answer = "GitHub"
+        challenge.options = options
         
         return challenge
     }
 
 }
 
-extension MainViewController: ChallengeDelegate {
+extension MainViewController: ChallengeHandlerDelegate {
     
     func challengeDidAnswerRight() {
         label.text = "Your are correct!"
