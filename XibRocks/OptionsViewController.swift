@@ -10,11 +10,14 @@ import UIKit
 
 final class OptionsViewController: UIViewController, ChallengeHandler {
     
+    @IBOutlet weak var tableView: UITableView!
+    
     var optionsChallenge: OptionsChallenge?
     var delegate: ChallengeHandlerDelegate?
     var challenge: BaseChallenge? {
         didSet {
             self.optionsChallenge = challenge as! OptionsChallenge?
+            self.tableView.reloadData()
         }
     }
     
