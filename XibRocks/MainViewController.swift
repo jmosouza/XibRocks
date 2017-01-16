@@ -20,24 +20,7 @@ final class MainViewController: UIViewController {
     
     var challengeIndex: Int?
     
-    var challengeHandler: ChallengeHandler? {
-        didSet {
-            self.challengeHandler?.delegate = self
-            
-            guard let challengeHandlerVC = challengeHandler as? UIViewController else {
-                return
-            }
-            
-            addChildViewController(challengeHandlerVC)
-            challengeHandlerVC.didMove(toParentViewController: self)
-            challengeHandlerVC.view.frame =
-                CGRect(x: 0,
-                       y: 0,
-                       width: containerView.frame.width,
-                       height: containerView.frame.height)
-            containerView.addSubview(challengeHandlerVC.view)
-        }
-    }
+    var challengeHandler: ChallengeHandler?
     
     var challenge: BaseChallenge? {
         didSet {
@@ -120,7 +103,8 @@ extension MainViewController: ChallengeHandlerDelegate {
     func challengeDidAnswerRight() {
         label.text = "Your are correct!"
         challengeIndex! += 1
-        challenge = challenges![challengeIndex!]
+//        challenge = challenges![challengeIndex!]
+        present(AnotherViewController(), animated: true, completion: nil)
     }
     
     func challengeDidAnswerWrong() {

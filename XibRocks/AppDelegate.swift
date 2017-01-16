@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Firebase
         FIRApp.configure()
+        FIRDatabase.database().persistenceEnabled = true
         let database = FIRDatabase.database().reference()
 
         // Main view
