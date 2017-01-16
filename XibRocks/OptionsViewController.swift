@@ -8,18 +8,34 @@
 
 import UIKit
 
-class OptionsViewController: ChallengeViewController {
+final class OptionsViewController: UIViewController, ChallengeHandler {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var optionsChallenge: OptionsChallenge?
+    var delegate: ChallengeHandlerDelegate?
+    var challenge: BaseChallenge? {
+        didSet {
+            self.optionsChallenge = challenge as! OptionsChallenge?
+            self.tableView.reloadData()
+        }
+    }
     
     func didAnswer(sender: UIButton) {
         
         let index = sender.tag
         
-        if let option = challenge?.options[index],
-            let success = challenge?.answer(option), success {
+        if let option = optionsChallenge?.options?[index],
+            let success = optionsChallenge?.checkAnswer(option), success {
             delegate?.challengeDidAnswerRight()
         } else {
             delegate?.challengeDidAnswerWrong()
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        optionsChallenge = challenge as! OptionsChallenge?
     }
 
 }
@@ -27,12 +43,12 @@ class OptionsViewController: ChallengeViewController {
 extension OptionsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return challenge?.options.count ?? 0
+        return optionsChallenge?.options?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UIView.fromNib() as OptionsCell
-        if let option = challenge?.options[indexPath.row] {
+        if let option = optionsChallenge?.options?[indexPath.row] {
             cell.button.tag = indexPath.row
             cell.button.setTitle(option, for: .normal)
             cell.button.addTarget(self, action: #selector(didAnswer), for: .touchUpInside)

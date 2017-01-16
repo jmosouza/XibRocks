@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OptionsViewController" customModule="XibRocks" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="i7L-eo-INx" id="Dp1-Xs-zzW"/>
                 <outlet property="view" destination="pg6-Gf-Jwa" id="uUK-TM-cFf"/>
             </connections>
         </placeholder>

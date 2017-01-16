@@ -7,39 +7,79 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var containerView: UIView!
     
-    var challenge: Challenge?
+    var database: FIRDatabaseReference?
+    var challenges: [OptionsChallenge]?
     
+    var challengeIndex: Int?
+    
+    var challengeHandler: ChallengeHandler?
+    
+    var challenge: BaseChallenge? {
+        didSet {
+            if let c = challenge {
+                label.text = c.question
+            }
+            if var ch = challengeHandler {
+                ch.challenge = challenge
+            }
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        challenge = MainViewController.generateChallenge()
+        challengeIndex = 0
+        challengeHandler = MainViewController.generateChallengeViewController()
+        challengeHandler?.delegate = self
         
-        label.text = challenge?.question
+        let challengeHandlerVC = challengeHandler as! UIViewController
         
-        let childViewController = MainViewController.generateChallengeViewController()
-        addChildViewController(childViewController)
-        childViewController.didMove(toParentViewController: self)
-        childViewController.delegate = self
-        childViewController.challenge = challenge
-        childViewController.view.frame =
+        addChildViewController(challengeHandlerVC)
+        challengeHandlerVC.didMove(toParentViewController: self)
+        challengeHandlerVC.view.frame =
             CGRect(x: 0,
                    y: 0,
                    width: containerView.frame.width,
                    height: containerView.frame.height)
-        containerView.addSubview(childViewController.view)
+        containerView.addSubview(challengeHandlerVC.view)
+        
+        challenges = []
+        database = FIRDatabase.database().reference()
+        if let database = database, challenges != nil {
+            let query = database.child("questions").queryLimited(toFirst: 100)
+            query.observeSingleEvent(of: .value) { (snapshot: FIRDataSnapshot) in
+                for child in snapshot.children {
+                    let snapshotChild = child as! FIRDataSnapshot
+                    if let challenge = snapshotChild.value as? NSDictionary {
+                        print(challenge["question"] ?? "...")
+                        self.challenges?.append(OptionsChallenge(dictionary: challenge))
+                    }
+                }
+                self.challenge = self.challenges?[0]
+            }
+        }
+        
+        challenge = MainViewController.generateChallenge()
+
     }
-    
-    class func generateChallengeViewController() -> ChallengeViewController {
+
+}
+
+extension MainViewController {
+
+    class func generateChallengeViewController() -> ChallengeHandler {
         return OptionsViewController()
     }
     
-    class func generateChallenge() -> Challenge {
+    class func generateChallenge() -> BaseChallenge {
         
         let options = [
             "GitHub",
@@ -48,20 +88,22 @@ class MainViewController: UIViewController {
             "Other"
         ]
         
-        let challenge = Challenge(
-            question: "What's your favorite git service?",
-            answer: "GitHub",
-            options: options)
+        let challenge = OptionsChallenge()
+        challenge.question = "What's your favorite git service?"
+        challenge.answer = "GitHub"
+        challenge.options = options
         
         return challenge
     }
 
 }
 
-extension MainViewController: ChallengeDelegate {
+extension MainViewController: ChallengeHandlerDelegate {
     
     func challengeDidAnswerRight() {
         label.text = "Your are correct!"
+        challengeIndex! += 1
+        challenge = challenges![challengeIndex!]
     }
     
     func challengeDidAnswerWrong() {

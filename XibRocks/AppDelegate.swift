@@ -7,21 +7,23 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
-
-
+    private let window = UIWindow.init(frame: UIScreen.main.bounds)
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let mainViewController = MainViewController()
-        
-        window = UIWindow.init(frame: UIScreen.main.bounds)
-        window?.backgroundColor = UIColor.white
-        window?.rootViewController = mainViewController
-        window?.makeKeyAndVisible()
+        // Firebase
+        FIRApp.configure()
+        FIRDatabase.database().persistenceEnabled = true
+
+        // Main view
+        window.rootViewController = MainViewController()
+        window.makeKeyAndVisible()
         
         return true
     }
@@ -48,6 +50,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
 }
-
