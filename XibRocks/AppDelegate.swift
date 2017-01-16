@@ -7,65 +7,23 @@
 //
 
 import UIKit
-import Fakery
 import Firebase
 import FirebaseDatabase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    private let window = UIWindow.init(frame: UIScreen.main.bounds)
     
-    let shouldCreateUser = false
-    let shouldCreateQuestions = false
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        // Fakery
-        let faker = Faker(locale: "pt-BR")
         
         // Firebase
         FIRApp.configure()
         FIRDatabase.database().persistenceEnabled = true
-        let database = FIRDatabase.database().reference()
 
         // Main view
-        let mainViewController = MainViewController()
-        window = UIWindow.init(frame: UIScreen.main.bounds)
-        window?.backgroundColor = UIColor.white
-        window?.rootViewController = mainViewController
-        window?.makeKeyAndVisible()
-
-        // New user
-        if shouldCreateUser {
-            let languages = ["ruby" : true, "swift" : true]
-            let user = database.child("users").childByAutoId()
-            user.setValue(["username": "jmosouza"])
-            user.child("languages").updateChildValues(languages, withCompletionBlock: { (error, child) in
-                if error == nil {
-                    print(child)
-                }
-            })
-        }
-        
-        // Questions
-        if shouldCreateQuestions {
-            for _ in 0..<1000 {
-                
-                var options = [String]()
-                for _ in 0..<4 {
-                    options.append(faker.lorem.word())
-                }
-                
-                let question = [
-                    "question": faker.lorem.sentence(),
-                    "answer": options[0],
-                    "options": options
-                ] as [String : Any]
-                
-                database.child("questions").childByAutoId().setValue(question)
-            }
-        }
+        window.rootViewController = MainViewController()
+        window.makeKeyAndVisible()
         
         return true
     }
@@ -92,6 +50,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
 }
-

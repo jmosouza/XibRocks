@@ -103,8 +103,7 @@ extension MainViewController: ChallengeHandlerDelegate {
     func challengeDidAnswerRight() {
         label.text = "Your are correct!"
         challengeIndex! += 1
-//        challenge = challenges![challengeIndex!]
-        present(AnotherViewController(), animated: true, completion: nil)
+        challenge = challenges![challengeIndex!]
     }
     
     func challengeDidAnswerWrong() {
