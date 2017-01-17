@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Oh-bH-tC6">
-                        <rect key="frame" x="8" y="0.0" width="359" height="39"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="39"/>
                         <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <state key="normal" title="Button">
@@ -27,10 +27,11 @@
                         </state>
                     </button>
                 </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="5Oh-bH-tC6" firstAttribute="top" secondItem="Sqk-0A-Kg2" secondAttribute="top" id="9z3-22-eyg"/>
                     <constraint firstItem="5Oh-bH-tC6" firstAttribute="height" secondItem="Sqk-0A-Kg2" secondAttribute="height" constant="-8" id="RDh-Ct-i0j"/>
-                    <constraint firstItem="5Oh-bH-tC6" firstAttribute="width" secondItem="Sqk-0A-Kg2" secondAttribute="width" constant="-16" id="fkh-ld-8js"/>
+                    <constraint firstItem="5Oh-bH-tC6" firstAttribute="width" secondItem="Sqk-0A-Kg2" secondAttribute="width" id="fkh-ld-8js"/>
                     <constraint firstItem="5Oh-bH-tC6" firstAttribute="centerX" secondItem="Sqk-0A-Kg2" secondAttribute="centerX" id="jcO-3L-2cH"/>
                 </constraints>
             </tableViewCellContentView>

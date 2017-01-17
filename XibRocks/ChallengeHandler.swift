@@ -8,7 +8,7 @@
 
 protocol ChallengeHandler {
 
-    var challenge: BaseChallenge? { get set }
+    var baseChallenge: BaseChallenge? { get set }
     var delegate: ChallengeHandlerDelegate? { get set }
 
 }

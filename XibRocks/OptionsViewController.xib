@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OptionsViewController" customModule="XibRocks" customModuleProvider="target">
             <connections>
+                <outlet property="questionLabel" destination="N00-nF-Sj6" id="4Vw-6d-Kj5"/>
                 <outlet property="tableView" destination="i7L-eo-INx" id="Dp1-Xs-zzW"/>
                 <outlet property="view" destination="pg6-Gf-Jwa" id="uUK-TM-cFf"/>
             </connections>
@@ -21,21 +22,35 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="48" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="i7L-eo-INx">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="16" y="148" width="343" height="519"/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <inset key="scrollIndicatorInsets" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="xtF-ue-hmy"/>
                     </connections>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Challenge text here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N00-nF-Sj6">
+                    <rect key="frame" x="16" y="20" width="343" height="120"/>
+                    <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="bQm-2j-m9p"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="i7L-eo-INx" firstAttribute="height" secondItem="pg6-Gf-Jwa" secondAttribute="height" id="2K5-Hs-HoX"/>
-                <constraint firstItem="i7L-eo-INx" firstAttribute="centerY" secondItem="pg6-Gf-Jwa" secondAttribute="centerY" id="4wi-Xx-pdY"/>
-                <constraint firstItem="i7L-eo-INx" firstAttribute="centerX" secondItem="pg6-Gf-Jwa" secondAttribute="centerX" id="Scu-9w-3fg"/>
-                <constraint firstItem="i7L-eo-INx" firstAttribute="width" secondItem="pg6-Gf-Jwa" secondAttribute="width" id="hUM-8y-wsX"/>
+                <constraint firstItem="i7L-eo-INx" firstAttribute="top" secondItem="N00-nF-Sj6" secondAttribute="bottom" constant="8" id="4Xy-Hq-Ghv"/>
+                <constraint firstItem="N00-nF-Sj6" firstAttribute="leading" secondItem="pg6-Gf-Jwa" secondAttribute="leading" constant="16" id="7IX-eI-bJm"/>
+                <constraint firstAttribute="bottom" secondItem="i7L-eo-INx" secondAttribute="bottom" id="Fj2-gV-ZYR"/>
+                <constraint firstItem="N00-nF-Sj6" firstAttribute="top" secondItem="pg6-Gf-Jwa" secondAttribute="top" constant="20" id="JxZ-hV-Fch"/>
+                <constraint firstItem="i7L-eo-INx" firstAttribute="leading" secondItem="pg6-Gf-Jwa" secondAttribute="leading" constant="16" id="YoW-UK-KfT"/>
+                <constraint firstAttribute="trailing" secondItem="i7L-eo-INx" secondAttribute="trailing" constant="16" id="tVw-58-gPh"/>
+                <constraint firstAttribute="trailing" secondItem="N00-nF-Sj6" secondAttribute="trailing" constant="16" id="w7G-Zu-toz"/>
             </constraints>
+            <point key="canvasLocation" x="33.5" y="89.5"/>
         </view>
     </objects>
 </document>

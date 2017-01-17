@@ -8,34 +8,37 @@
 
 import UIKit
 
+/**
+ Display one options-style challenge and handle player input.
+ */
 final class OptionsViewController: UIViewController, ChallengeHandler {
     
+    @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var optionsChallenge: OptionsChallenge?
     var delegate: ChallengeHandlerDelegate?
-    var challenge: BaseChallenge? {
-        didSet {
-            self.optionsChallenge = challenge as! OptionsChallenge?
-            self.tableView.reloadData()
+    var baseChallenge: BaseChallenge?
+    var challenge: OptionsChallenge? {
+        get {
+            return self.baseChallenge as? OptionsChallenge
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // MARK: TODO read current challenge from singleton
     }
     
     func didAnswer(sender: UIButton) {
         
         let index = sender.tag
         
-        if let option = optionsChallenge?.options?[index],
-            let success = optionsChallenge?.checkAnswer(option), success {
+        if let option = challenge?.options?[index],
+            let success = challenge?.checkAnswer(option), success {
             delegate?.challengeDidAnswerRight()
         } else {
             delegate?.challengeDidAnswerWrong()
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        optionsChallenge = challenge as! OptionsChallenge?
     }
 
 }
@@ -43,12 +46,12 @@ final class OptionsViewController: UIViewController, ChallengeHandler {
 extension OptionsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return optionsChallenge?.options?.count ?? 0
+        return challenge?.options?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UIView.fromNib() as OptionsCell
-        if let option = optionsChallenge?.options?[indexPath.row] {
+        if let option = challenge?.options?[indexPath.row] {
             cell.button.tag = indexPath.row
             cell.button.setTitle(option, for: .normal)
             cell.button.addTarget(self, action: #selector(didAnswer), for: .touchUpInside)
